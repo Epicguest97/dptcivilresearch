@@ -8,13 +8,13 @@ import { Mail, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 const professors = [
   {
     id: 1,
-    name: "Dr. Sarah Johnson",
-    title: "Professor of Structural Engineering",
-    research: "Earthquake-resistant structures, Sustainable materials, Bridge design",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    name: "Laxman P Kudva",
+    title: "Assistant Professor Senior Sclae",
+    research: "Concrete technology, construction industry and management, building materials",
+    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     email: "sarah.johnson@university.edu",
-    publications: 15,
-    education: "Ph.D. in Civil Engineering, MIT",
+    publications: 12,
+    education: "B.E. (CIVIL), M.Tech. (Construction Engineering and Management)",
     about: "Dr. Johnson specializes in developing innovative structural solutions for earthquake-prone regions. Her research focuses on sustainable building materials and advanced bridge design techniques.",
     currentProjects: [
       "Developing eco-friendly concrete alternatives",

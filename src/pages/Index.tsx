@@ -6,21 +6,21 @@ import { ProfessorCard } from "@/components/ProfessorCard";
 const professors = [
   {
     id: 1,
-    name: "Dr. Sarah Johnson",
-    title: "Professor of Structural Engineering",
-    research: "Earthquake-resistant structures, Sustainable materials, Bridge design",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    name: "Laxman P Kudva",
+    title: "Assistant Professor Senior Sclae",
+    research: "EConcrete technology, construction industry and management, building materials",
+    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
   },
   {
     id: 2,
-    name: "Dr. Michael Chen",
+    name: "Dr. Someone",
     title: "Associate Professor of Environmental Engineering",
     research: "Water treatment, Environmental impact, Sustainable development",
     imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
   },
   {
     id: 3,
-    name: "Dr. Emily Rodriguez",
+    name: "Dr. someoneelse",
     title: "Professor of Transportation Engineering",
     research: "Smart transportation, Urban mobility, Traffic optimization",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
