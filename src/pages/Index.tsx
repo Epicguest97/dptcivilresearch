@@ -8,22 +8,22 @@ const professors = [
     id: 1,
     name: "Dr. Sarah Johnson",
     title: "Professor of Structural Engineering",
-    research: "Specializing in earthquake-resistant structures and sustainable building materials.",
-    imageUrl: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+    research: "Earthquake-resistant structures, Sustainable materials, Bridge design",
+    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
   },
   {
     id: 2,
     name: "Dr. Michael Chen",
     title: "Associate Professor of Environmental Engineering",
-    research: "Focusing on water treatment technologies and environmental impact assessment.",
-    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+    research: "Water treatment, Environmental impact, Sustainable development",
+    imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
   },
   {
     id: 3,
     name: "Dr. Emily Rodriguez",
     title: "Professor of Transportation Engineering",
-    research: "Researching smart transportation systems and urban mobility solutions.",
-    imageUrl: "https://images.unsplash.com/photo-1486718448742-163732cd1544",
+    research: "Smart transportation, Urban mobility, Traffic optimization",
+    imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
   },
 ];
 
