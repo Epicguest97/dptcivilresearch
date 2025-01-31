@@ -56,6 +56,30 @@ const professors = [
   }
 ];
 
+const recentPublications = [
+  {
+    id: 1,
+    title: "Advanced Concrete Mix Design for Sustainable Construction",
+    authors: "Dr. Laxman P Kudva, Dr. John Smith",
+    date: "March 2024",
+    journal: "Journal of Construction Materials"
+  },
+  {
+    id: 2,
+    title: "Urban Water Management: A Case Study in Karnataka",
+    authors: "Dr. Jane Smith, Dr. Someone",
+    date: "February 2024",
+    journal: "Water Resources Management Quarterly"
+  },
+  {
+    id: 3,
+    title: "Smart Transportation Systems in Growing Cities",
+    authors: "Dr. someoneelse, Dr. John Doe",
+    date: "January 2024",
+    journal: "Transportation Engineering Review"
+  }
+];
+
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedField, setSelectedField] = useState("All");
@@ -103,10 +127,33 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredProfessors.map((professor) => (
             <ProfessorCard key={professor.id} professor={professor} />
           ))}
+        </div>
+
+        <div className="bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Latest Research Publications
+          </h2>
+          <div className="space-y-6">
+            {recentPublications.map((pub) => (
+              <div 
+                key={pub.id} 
+                className="border-b border-gray-200 pb-6 last:border-b-0 animate-fade-in"
+              >
+                <h3 className="text-xl font-semibold text-primary mb-2">
+                  {pub.title}
+                </h3>
+                <p className="text-gray-600 mb-1">{pub.authors}</p>
+                <div className="flex justify-between text-sm text-gray-500">
+                  <span>{pub.journal}</span>
+                  <span>{pub.date}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
