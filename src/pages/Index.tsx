@@ -108,22 +108,26 @@ const Index = () => {
           </h2>
           
           <div className="flex flex-col gap-8">
-            <Tabs defaultValue="All" className="w-full">
-              <TabsList className="w-full flex flex-wrap justify-center gap-2">
-                {researchFields.map((field) => (
-                  <TabsTrigger
-                    key={field}
-                    value={field}
-                    onClick={() => setSelectedField(field)}
-                    className="px-4 py-2"
-                  >
-                    {field}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
+            <div className="w-full overflow-x-auto pb-4">
+              <Tabs defaultValue="All" className="w-full">
+                <TabsList className="w-full flex flex-nowrap justify-start md:justify-center gap-2 min-w-max px-2">
+                  {researchFields.map((field) => (
+                    <TabsTrigger
+                      key={field}
+                      value={field}
+                      onClick={() => setSelectedField(field)}
+                      className="px-4 py-2 whitespace-nowrap"
+                    >
+                      {field}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </Tabs>
+            </div>
 
-            <SearchBar onSearch={setSearchQuery} />
+            <div className="mt-4 md:mt-6">
+              <SearchBar onSearch={setSearchQuery} />
+            </div>
           </div>
         </div>
 
