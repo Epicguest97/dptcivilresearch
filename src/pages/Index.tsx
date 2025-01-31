@@ -16,7 +16,7 @@ const researchFields = [
 const professors = [
   {
     id: 1,
-    name: "Laxman P Kudva",
+    name: " Dr. Laxman P Kudva",
     title: "Assistant Professor Senior Scale",
     research: "Construction Technology, Building Materials",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
