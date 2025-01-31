@@ -110,7 +110,7 @@ const Index = () => {
           <div className="flex flex-col gap-8">
             <div className="w-full overflow-x-auto pb-6 relative">
               <Tabs defaultValue="All" className="w-full">
-                <TabsList className="w-full flex flex-wrap justify-start md:justify-center gap-2 px-2">
+                <TabsList className="w-full flex flex-nowrap justify-start md:justify-center gap-2 min-w-max px-2">
                   {researchFields.map((field) => (
                     <TabsTrigger
                       key={field}
