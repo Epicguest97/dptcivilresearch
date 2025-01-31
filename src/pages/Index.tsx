@@ -108,15 +108,15 @@ const Index = () => {
           </h2>
           
           <div className="flex flex-col gap-8">
-            <div className="w-full overflow-x-auto pb-6 relative">
+            <div className="w-full pb-6 ">
               <Tabs defaultValue="All" className="w-full">
-                <TabsList className="w-full flex flex-nowrap justify-start md:justify-center gap-2 min-w-max px-2">
+                <TabsList className="w-full flex flex-wrap justify-start md:justify-center gap-2 px-2">
                   {researchFields.map((field) => (
                     <TabsTrigger
                       key={field}
                       value={field}
                       onClick={() => setSelectedField(field)}
-                      className="px-4 py-2 whitespace-nowrap"
+                      className="px-4 py-2 whitespace-nowrap md:text-base"
                     >
                       {field}
                     </TabsTrigger>
