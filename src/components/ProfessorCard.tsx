@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Mail, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 interface Professor {
   id: number;
@@ -17,17 +18,25 @@ interface ProfessorCardProps {
 }
 
 export const ProfessorCard = ({ professor }: ProfessorCardProps) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const researchTopics = professor.research.split(',').map(topic => topic.trim());
 
   return (
     <Link to={`/professor/${professor.id}`}>
       <Card className="group relative overflow-hidden hover:shadow-md transition-shadow">
         <div className="flex p-4 gap-4">
-          <div className="w-24 h-24 shrink-0 overflow-hidden rounded-full">
+          <div className="w-24 h-24 shrink-0 overflow-hidden rounded-full bg-gray-100">
+            {!imageLoaded && (
+              <div className="w-full h-full animate-pulse bg-gray-200" />
+            )}
             <img
               src={professor.imageUrl}
               alt={professor.name}
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover transition-opacity duration-300 ${
+                imageLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              onLoad={() => setImageLoaded(true)}
+              loading="lazy"
             />
           </div>
           
