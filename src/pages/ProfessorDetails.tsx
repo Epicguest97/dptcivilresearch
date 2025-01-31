@@ -9,33 +9,87 @@ const professors = [
   {
     id: 1,
     name: "Laxman P Kudva",
-    title: "Assistant Professor Senior Sclae",
-    research: "Concrete technology, construction industry and management, building materials",
+    title: "Assistant Professor Senior Scale",
+    research: "Concrete technology, Construction industry and management, Building materials",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    email: "sarah.johnson@university.edu",
-    publications: 12,
+    email: "laxman.kudva@university.edu",
+    publications: 15,
     education: "B.E. (CIVIL), M.Tech. (Construction Engineering and Management)",
-    about: "Dr. Johnson specializes in developing innovative structural solutions for earthquake-prone regions. Her research focuses on sustainable building materials and advanced bridge design techniques.",
+    about: "Prof. Kudva specializes in developing innovative construction technologies and sustainable building materials. His research focuses on improving construction industry practices and management techniques.",
     currentProjects: [
-      "Developing eco-friendly concrete alternatives",
-      "Seismic response of high-rise buildings",
-      "Smart bridge monitoring systems"
+      "Development of eco-friendly concrete mixtures",
+      "Construction project management optimization",
+      "Sustainable building materials research"
+    ],
+    publishedResearch: [
+      {
+        title: "Advanced Concrete Mix Design for Sustainable Construction",
+        journal: "Journal of Construction Materials",
+        year: 2024
+      },
+      {
+        title: "Optimization of Construction Project Management Techniques",
+        journal: "Construction Management Review",
+        year: 2023
+      }
     ]
   },
   {
     id: 2,
-    name: "Dr. Michael Chen",
+    name: "Dr. Someone",
     title: "Associate Professor of Environmental Engineering",
     research: "Water treatment, Environmental impact, Sustainable development",
     imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
+    email: "someone@university.edu",
+    publications: 20,
+    education: "Ph.D. Environmental Engineering, M.Tech. Environmental Science",
+    about: "Dr. Someone is dedicated to solving environmental challenges through innovative water treatment solutions and sustainable development practices.",
+    currentProjects: [
+      "Advanced water treatment technologies",
+      "Environmental impact assessment methods",
+      "Sustainable urban development"
+    ],
+    publishedResearch: [
+      {
+        title: "Urban Water Management: A Case Study in Karnataka",
+        journal: "Water Resources Management Quarterly",
+        year: 2024
+      },
+      {
+        title: "Sustainable Urban Development Practices",
+        journal: "Environmental Science Journal",
+        year: 2023
+      }
+    ]
   },
   {
     id: 3,
-    name: "Dr. Emily Rodriguez",
+    name: "Dr. someoneelse",
     title: "Professor of Transportation Engineering",
     research: "Smart transportation, Urban mobility, Traffic optimization",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-  },
+    email: "someoneelse@university.edu",
+    publications: 25,
+    education: "Ph.D. Transportation Engineering, M.Tech. Traffic Systems",
+    about: "Dr. someoneelse focuses on developing smart transportation solutions and optimizing urban mobility systems.",
+    currentProjects: [
+      "Smart traffic management systems",
+      "Urban mobility optimization",
+      "Sustainable transportation infrastructure"
+    ],
+    publishedResearch: [
+      {
+        title: "Smart Transportation Systems in Growing Cities",
+        journal: "Transportation Engineering Review",
+        year: 2024
+      },
+      {
+        title: "Urban Mobility Patterns Analysis",
+        journal: "Smart Cities Journal",
+        year: 2023
+      }
+    ]
+  }
 ];
 
 const ProfessorDetails = () => {
@@ -139,6 +193,25 @@ const ProfessorDetails = () => {
                   </li>
                 ))}
               </ul>
+            </CardContent>
+          </Card>
+
+          {/* Published Research */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Published Research</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {professor.publishedResearch.map((paper, index) => (
+                  <div key={index} className="border-b border-gray-200 last:border-b-0 pb-4 last:pb-0">
+                    <h3 className="font-semibold text-lg mb-1">{paper.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {paper.journal} • {paper.year}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </CardContent>
           </Card>
         </div>
