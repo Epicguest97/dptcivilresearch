@@ -4,11 +4,10 @@ export const HeroSection = () => {
       <div className="container mx-auto">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Civil Engineering Research & Innovation
+            Department Of Civil Engineering
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Discover groundbreaking research and projects from our distinguished faculty members
-            in civil engineering.
+           Civil Engineering Research And Innovation
           </p>
           <a
             href="#professors"
