@@ -30,9 +30,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <HeroSection />
       <main className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Research Fields
-        </h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Research Fields</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {researchFields.map((field) => (
             <Link to={`/research/${field.id}`} key={field.id}>
@@ -49,40 +47,36 @@ const Index = () => {
           ))}
         </div>
       </main>
-      <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Latest Research
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {latestPapers.map((paper) => (
-              <Card key={paper.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
-                    <CalendarDays className="h-4 w-4" />
-                    <span>{paper.date}</span>
-                  </div>
-                  <CardTitle className="text-lg mb-2">
-                    {paper.title}
-                  </CardTitle>
-                  <CardDescription>
-                    <Link 
-                      to={`/research/${paper.fieldId}`} 
-                      className="text-accent hover:underline block mb-1"
-                    >
-                      {paper.field}
-                    </Link>
-                    <p className="text-sm text-gray-600 mb-2">{paper.area}</p>
-                    <p className="text-sm line-clamp-2">
-                      {paper.abstract}
-                    </p>
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
+      
+      <div className="container mx-auto px-4 mb-16">
+        <h2 className="text-3xl font-bold text-center mb-8">Latest Research</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {latestPapers.map((paper) => (
+            <Card key={paper.id} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                  <CalendarDays className="h-4 w-4" />
+                  <span>{paper.date}</span>
+                </div>
+                <CardTitle className="text-lg mb-2">{paper.title}</CardTitle>
+                <CardDescription>
+                  <Link 
+                    to={`/research/${paper.fieldId}`} 
+                    className="text-accent hover:underline block mb-1"
+                  >
+                    {paper.field}
+                  </Link>
+                  <p className="text-sm text-gray-600 mb-2">{paper.area}</p>
+                  <p className="text-sm line-clamp-2">{paper.abstract}</p>
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
+      </div>
     </div>
   );
+  
 };
 
 export default Index;
