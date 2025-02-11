@@ -16,6 +16,21 @@ const ResearchField = () => {
     return <div className="container mx-auto px-4 py-8">Research field not found</div>;
   }
 
+  const renderAuthors = (authors: string) => {
+    return authors.split(", ").map((author, index, array) => (
+      <span key={author}>
+        {author.startsWith("Dr. Laxman P Kudva") ? (
+          <Link to="/professor/1" className="text-accent hover:underline">
+            {author}
+          </Link>
+        ) : (
+          author
+        )}
+        {index < array.length - 1 ? ", " : ""}
+      </span>
+    ));
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
@@ -66,7 +81,7 @@ const ResearchField = () => {
                           </div>
                           
                           <p className="text-sm text-gray-600 mt-2">
-                            {paper.authors}
+                            {renderAuthors(paper.authors)}
                           </p>
                           
                           <div className="text-sm text-gray-500 mt-1">
