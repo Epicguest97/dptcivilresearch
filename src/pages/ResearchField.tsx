@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { researchFields } from "@/data/researchFields";
 
 const ResearchField = () => {
@@ -47,19 +47,37 @@ const ResearchField = () => {
 
               {expandedArea === area.id && (
                 <CardContent>
-                  <ScrollArea className="h-[300px] w-full">
-                    <div className="space-y-4">
+                  <ScrollArea className="h-[500px] w-full">
+                    <div className="space-y-6">
                       {area.papers.map((paper) => (
-                        <div key={paper.id} className="p-4 border-b last:border-b-0">
-                          <a 
-                            href={paper.url}
-                            className="text-accent hover:underline font-medium block mb-2"
-                          >
-                            {paper.title}
-                          </a>
-                          <p className="text-sm text-gray-600">{paper.authors}</p>
+                        <div key={paper.id} className="p-4 border rounded-lg">
+                          <div className="flex items-start justify-between gap-4">
+                            <h3 className="text-lg font-semibold text-accent">
+                              {paper.title}
+                            </h3>
+                            <a 
+                              href={paper.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 text-sm text-accent hover:underline"
+                            >
+                              View Paper <ExternalLink className="h-4 w-4" />
+                            </a>
+                          </div>
+                          
+                          <p className="text-sm text-gray-600 mt-2">
+                            {paper.authors}
+                          </p>
+                          
                           <div className="text-sm text-gray-500 mt-1">
                             {paper.journal} • {paper.date}
+                          </div>
+                          
+                          <div className="mt-4 text-gray-700 text-sm">
+                            <h4 className="font-semibold mb-2">Abstract:</h4>
+                            <p className="leading-relaxed">
+                              {paper.abstract}
+                            </p>
                           </div>
                         </div>
                       ))}

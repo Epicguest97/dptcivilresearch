@@ -6,6 +6,7 @@ export interface ResearchPaper {
   journal: string;
   date: string;
   url: string;
+  abstract: string;
 }
 
 export interface ResearchArea {
