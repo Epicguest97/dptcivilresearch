@@ -4,10 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
-const researchFields = [
-  // ... same data as in Index.tsx
-];
+import { researchFields } from "@/data/researchFields";
 
 const ResearchField = () => {
   const { id } = useParams();
