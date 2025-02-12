@@ -149,7 +149,7 @@ const ProfessorDetails = () => {
                 <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Google Scholar
+                    Pure Link
                   </Button>
                 </a>
                 <a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">

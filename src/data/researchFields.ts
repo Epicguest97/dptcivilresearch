@@ -4,8 +4,8 @@ import { ResearchField } from "../types/research";
 export const researchFields: ResearchField[] = [
   {
     id: 1,
-    name: "Building Construction Technology and Management",
-    shortName: "BCTM",
+    name: "Building Technology Construction and Management",
+    shortName: "BTCM",
     description: "Advanced construction techniques, project management, and sustainable building practices",
     areas: [
       {

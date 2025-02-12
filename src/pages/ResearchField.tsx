@@ -36,7 +36,7 @@ const ResearchField = () => {
       <div className="container mx-auto px-4">
         <div className="mb-8">
           <Link to="/" className="text-accent hover:underline">
-            ← Back to Research Fields
+            ← Back to Home
           </Link>
         </div>
 
