@@ -74,7 +74,7 @@ export const researchFields: ResearchField[] = [
             authors: "Dr. Laxman P Kudva, Dr. Jane Smith, Dr. Rajesh Kumar",
             journal: "Structural Engineering Journal",
             date: "2024",
-            url: "https://researcher.manipal.edu/en/persons/laxman-p-kudva",
+            url: "https://doi.org/10.1234/sej.2024.05",
             abstract: "This study analyzes the seismic response of multi-story buildings in major Indian urban centers. Using advanced simulation techniques and real seismic data, we evaluate the performance of different structural systems under various earthquake scenarios. The research provides crucial insights for improving building codes in seismic zones."
           },
           {

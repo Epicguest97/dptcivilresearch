@@ -132,10 +132,14 @@ const ProfessorDetails = () => {
                 <Mail className="mr-2 h-4 w-4" />
                 Contact
               </Button>
-              <Button variant="outline">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Google Scholar
-              </Button>
+              <div>
+              <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline">
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Google Scholar
+                </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
