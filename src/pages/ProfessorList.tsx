@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, BookOpen, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -62,61 +62,59 @@ const ProfessorList = () => {
           </TabsList>
 
           {professors.map((professor) => (
-            <Card
-              key={professor.id}
-              value={professor.id.toString()}
-              className="mb-4"
-            >
-              <CardContent className="pt-6">
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="w-48 h-48 shrink-0">
-                    <img
-                      src={professor.imageUrl}
-                      alt={professor.name}
-                      className="w-full h-full object-cover rounded-full"
-                    />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-bold mb-2">{professor.name}</h2>
-                    <p className="text-lg text-muted-foreground mb-4">
-                      {professor.title}
-                    </p>
+            <TabsContent key={professor.id} value={professor.id.toString()}>
+              <Card className="mb-4">
+                <CardContent className="pt-6">
+                  <div className="flex flex-col md:flex-row gap-8">
+                    <div className="w-48 h-48 shrink-0">
+                      <img
+                        src={professor.imageUrl}
+                        alt={professor.name}
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
                     
-                    <div className="flex flex-wrap gap-4 mb-6">
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Mail className="h-4 w-4" />
-                        <span>{professor.email}</span>
+                    <div className="flex-1">
+                      <h2 className="text-2xl font-bold mb-2">{professor.name}</h2>
+                      <p className="text-lg text-muted-foreground mb-4">
+                        {professor.title}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-4 mb-6">
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <Mail className="h-4 w-4" />
+                          <span>{professor.email}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <BookOpen className="h-4 w-4" />
+                          <span>{professor.publications} Publications</span>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <BookOpen className="h-4 w-4" />
-                        <span>{professor.publications} Publications</span>
-                      </div>
-                    </div>
 
-                    <div className="flex gap-4">
-                      <Link to={`/professor/${professor.id}`}>
-                        <Button>View Full Profile</Button>
-                      </Link>
-                      <div className="space-x-2">
-                        <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
-                          <Button variant="outline">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            Google Scholar
-                          </Button>
-                        </a>
-                        <a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">
-                          <Button variant="outline">
-                            <ExternalLink className="mr-2 h-4 w-4" />
-                            ResearchGate
-                          </Button>
-                        </a>
+                      <div className="flex gap-4">
+                        <Link to={`/professor/${professor.id}`}>
+                          <Button>View Full Profile</Button>
+                        </Link>
+                        <div className="space-x-2">
+                          <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline">
+                              <ExternalLink className="mr-2 h-4 w-4" />
+                              Google Scholar
+                            </Button>
+                          </a>
+                          <a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline">
+                              <ExternalLink className="mr-2 h-4 w-4" />
+                              ResearchGate
+                            </Button>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </TabsContent>
           ))}
         </Tabs>
       </div>
