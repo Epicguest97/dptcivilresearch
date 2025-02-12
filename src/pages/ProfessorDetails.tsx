@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Mail, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 
-// This would typically come from an API or database
 const professors = [
   {
     id: 1,
@@ -105,7 +104,6 @@ const ProfessorDetails = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        {/* Header Section */}
         <div className="flex flex-col md:flex-row gap-8 mb-8">
           <div className="w-48 h-48 shrink-0">
             <img
@@ -132,21 +130,25 @@ const ProfessorDetails = () => {
                 <Mail className="mr-2 h-4 w-4" />
                 Contact
               </Button>
-              <div>
-              <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Google Scholar
-                </Button>
+              <div className="space-x-2">
+                <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    Google Scholar
+                  </Button>
+                </a>
+                <a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    ResearchGate
+                  </Button>
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="grid gap-8">
-          {/* About Section */}
           <Card>
             <CardHeader>
               <CardTitle>About</CardTitle>
@@ -156,7 +158,6 @@ const ProfessorDetails = () => {
             </CardContent>
           </Card>
 
-          {/* Education & Stats */}
           <div className="grid md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
@@ -184,7 +185,6 @@ const ProfessorDetails = () => {
             </Card>
           </div>
 
-          {/* Current Projects */}
           <Card>
             <CardHeader>
               <CardTitle>Current Projects</CardTitle>
@@ -200,7 +200,6 @@ const ProfessorDetails = () => {
             </CardContent>
           </Card>
 
-          {/* Published Research */}
           <Card>
             <CardHeader>
               <CardTitle>Published Research</CardTitle>

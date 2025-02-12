@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 export const HeroSection = () => {
   return (
     <div className="relative bg-primary text-white py-20 px-4">
@@ -11,13 +13,13 @@ export const HeroSection = () => {
             <p className="text-lg md:text-xl text-gray-200 mb-8">
               Civil Engineering Research And Innovation
             </p>
-            <a
-              href="#professors"
+            <Link
+              to="/professors"
               className="inline-block bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg 
               transition-colors duration-200"
             >
               Meet Our Professors
-            </a>
+            </Link>
           </div>
           
           <div className="mt-8 md:mt-0 w-full md:w-1/3 flex justify-center items-center">
