@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
+
+import { useParams, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mail, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
+import { Mail, BookOpen, GraduationCap, ExternalLink, ArrowLeft } from "lucide-react";
 
 const professors = [
   {
@@ -93,17 +94,31 @@ const professors = [
 
 const ProfessorDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const professor = professors.find(p => p.id === Number(id));
 
   if (!professor) {
     return <div className="container mx-auto px-4 py-8">Professor not found</div>;
   }
 
+  const handleBack = () => {
+    navigate(-1); // This will go back to the previous page in history
+  };
+
   const researchTopics = professor.research.split(',').map(topic => topic.trim());
 
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
+        <Button 
+          variant="ghost" 
+          onClick={handleBack} 
+          className="mb-6 hover:bg-transparent p-0"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back
+        </Button>
+
         <div className="flex flex-col md:flex-row gap-8 mb-8">
           <div className="w-48 h-48 shrink-0">
             <img
