@@ -155,13 +155,13 @@ const ProfessorDetails = () => {
                 <a href={professor.scholarLink} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Scholar
+                    Pure Link
                   </Button>
                 </a>
                 <a href={professor.researchGateLink} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    ResearchGate
+                    Scorpus
                   </Button>
                 </a>
               </div>
