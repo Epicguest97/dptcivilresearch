@@ -33,8 +33,8 @@ const professors: Professor[] = [
         year: 2023
       }
     ],
-    scholarLink: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID",
-    researchGateLink: "https://www.researchgate.net/profile/YOUR_RESEARCH_GATE_ID"
+    scholarLink: "https://researcher.manipal.edu/en/persons/laxman-p-kudva",
+    researchGateLink: "https://www.researchgate.net/profile/Laxman-Kudva"
   },
   {
     id: 2,
