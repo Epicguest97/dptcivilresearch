@@ -1,11 +1,10 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, BookOpen, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Professor } from "@/types/professor";
 
-// Using the same professors data from ProfessorDetails
-const professors = [
+const professors: Professor[] = [
   {
     id: 1,
     name: "Dr. Laxman P Kudva",
@@ -13,7 +12,30 @@ const professors = [
     research: "Concrete technology, Construction industry and management, Building materials",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     email: "laxman.kudva@university.edu",
-    publications: 15
+    publications: 15,
+    education: "B.E. (CIVIL), M.Tech. (Construction Engineering and Management)",
+    about: "Prof. Kudva specializes in developing innovative construction technologies and sustainable building materials. His research focuses on improving construction industry practices and management techniques.",
+    currentProjects: [
+      "Development of eco-friendly concrete mixtures",
+      "Construction project management optimization",
+      "Sustainable building materials research"
+    ],
+    publishedResearch: [
+      {
+        title: "Advanced Concrete Mix Design for Sustainable Construction",
+        journal: "Journal of Construction Materials",
+        year: 2024
+      },
+      {
+        title: "Optimization of Construction Project Management Techniques",
+        journal: "Construction Management Review",
+        year: 2023
+      }
+    ],
+    scholarLink: "https://researcher.manipal.edu/en/persons/laxman-p-kudva",
+    researchGateLink: "https://www.researchgate.net/profile/Laxman-Kudva",
+    department: "Civil Engineering",
+    officeLocation: "Academic Block 3, Room 507"
   },
   {
     id: 2,
@@ -22,7 +44,30 @@ const professors = [
     research: "Water treatment, Environmental impact, Sustainable development",
     imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
     email: "someone@university.edu",
-    publications: 20
+    publications: 20,
+    education: "Ph.D. Environmental Engineering, M.Tech. Environmental Science",
+    about: "Dr. Someone is dedicated to solving environmental challenges through innovative water treatment solutions and sustainable development practices.",
+    currentProjects: [
+      "Advanced water treatment technologies",
+      "Environmental impact assessment methods",
+      "Sustainable urban development"
+    ],
+    publishedResearch: [
+      {
+        title: "Urban Water Management: A Case Study in Karnataka",
+        journal: "Water Resources Management Quarterly",
+        year: 2024
+      },
+      {
+        title: "Sustainable Urban Development Practices",
+        journal: "Environmental Science Journal",
+        year: 2023
+      }
+    ],
+    scholarLink: "https://scholar.google.com/citations?user=example1",
+    researchGateLink: "https://www.researchgate.net/profile/example1",
+    department: "Environmental Engineering",
+    officeLocation: "Academic Block 2, Room 305"
   },
   {
     id: 3,
@@ -31,7 +76,30 @@ const professors = [
     research: "Smart transportation, Urban mobility, Traffic optimization",
     imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     email: "someoneelse@university.edu",
-    publications: 25
+    publications: 25,
+    education: "Ph.D. Transportation Engineering, M.Tech. Traffic Systems",
+    about: "Dr. someoneelse focuses on developing smart transportation solutions and optimizing urban mobility systems.",
+    currentProjects: [
+      "Smart traffic management systems",
+      "Urban mobility optimization",
+      "Sustainable transportation infrastructure"
+    ],
+    publishedResearch: [
+      {
+        title: "Smart Transportation Systems in Growing Cities",
+        journal: "Transportation Engineering Review",
+        year: 2024
+      },
+      {
+        title: "Urban Mobility Patterns Analysis",
+        journal: "Smart Cities Journal",
+        year: 2023
+      }
+    ],
+    scholarLink: "https://scholar.google.com/citations?user=example2",
+    researchGateLink: "https://www.researchgate.net/profile/example2",
+    department: "Transportation Engineering",
+    officeLocation: "Academic Block 1, Room 205"
   }
 ];
 
@@ -85,7 +153,7 @@ const ProfessorList = () => {
                       </Link>
                       <div className="flex gap-2">
                         <a 
-                          href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" 
+                          href={professor.scholarLink}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex-1"
@@ -96,7 +164,7 @@ const ProfessorList = () => {
                           </Button>
                         </a>
                         <a 
-                          href="https://www.researchgate.net/" 
+                          href={professor.researchGateLink}
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex-1"

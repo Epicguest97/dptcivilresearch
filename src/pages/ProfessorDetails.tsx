@@ -1,11 +1,11 @@
-
 import { useParams, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Mail, BookOpen, GraduationCap, ExternalLink, ArrowLeft } from "lucide-react";
+import { Professor } from "@/types/professor";
 
-const professors = [
+const professors: Professor[] = [
   {
     id: 1,
     name: " Dr. Laxman P Kudva",
@@ -32,7 +32,9 @@ const professors = [
         journal: "Construction Management Review",
         year: 2023
       }
-    ]
+    ],
+    scholarLink: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID",
+    researchGateLink: "https://www.researchgate.net/profile/YOUR_RESEARCH_GATE_ID"
   },
   {
     id: 2,
@@ -60,7 +62,9 @@ const professors = [
         journal: "Environmental Science Journal",
         year: 2023
       }
-    ]
+    ],
+    scholarLink: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID",
+    researchGateLink: "https://www.researchgate.net/profile/YOUR_RESEARCH_GATE_ID"
   },
   {
     id: 3,
@@ -88,7 +92,9 @@ const professors = [
         journal: "Smart Cities Journal",
         year: 2023
       }
-    ]
+    ],
+    scholarLink: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID",
+    researchGateLink: "https://www.researchgate.net/profile/YOUR_RESEARCH_GATE_ID"
   }
 ];
 
@@ -102,7 +108,7 @@ const ProfessorDetails = () => {
   }
 
   const handleBack = () => {
-    navigate(-1); // This will go back to the previous page in history
+    navigate(-1);
   };
 
   const researchTopics = professor.research.split(',').map(topic => topic.trim());
@@ -146,13 +152,13 @@ const ProfessorDetails = () => {
                 Contact
               </Button>
               <div className="space-x-2">
-                <a href="https://researcher.manipal.edu/en/persons/laxman-p-kudva" target="_blank" rel="noopener noreferrer">
+                <a href={professor.scholarLink} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    Pure Link
+                    Scholar
                   </Button>
                 </a>
-                <a href="https://www.researchgate.net/" target="_blank" rel="noopener noreferrer">
+                <a href={professor.researchGateLink} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     ResearchGate
