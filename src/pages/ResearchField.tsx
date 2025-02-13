@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Badge } from "@/components/ui/badge";
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { researchFields } from "@/data/researchFields";
 
@@ -93,6 +94,18 @@ const ResearchField = () => {
                             <p className="leading-relaxed">
                               {paper.abstract}
                             </p>
+                          </div>
+
+                          <div className="mt-3 flex gap-2">
+                            {paper.keywords.map((keyword, index) => (
+                              <Badge 
+                                key={index} 
+                                variant="secondary"
+                                className="text-xs"
+                              >
+                                {keyword}
+                              </Badge>
+                            ))}
                           </div>
                         </div>
                       ))}
