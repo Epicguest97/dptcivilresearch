@@ -42,7 +42,7 @@ const ResearchField = () => {
         </div>
 
         <h1 className="text-4xl font-bold mb-2">{field.name}</h1>
-        <p className="text-xl text-gray-600 mb-8">{field.description}</p>
+        <p className="text-xl text-gray-600 mb-8">{field.fullDescription}</p>
 
         <div className="space-y-4">
           {field.areas.map((area) => (
