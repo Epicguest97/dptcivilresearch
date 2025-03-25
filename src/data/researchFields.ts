@@ -1,12 +1,14 @@
-
 import { ResearchField } from "../types/research";
+
 
 export const researchFields: ResearchField[] = [
   {
     id: 1,
-    name: "Building Technology Construction and Management",
-    shortName: "BTCM",
-    description: "Advanced construction techniques, project management, and sustainable building practices",
+    name: "Geotechnical Characterization, and Sustainable Ground Improvement",
+    shortName: "GCSGI",
+    description: "Innovative soil characterization, stabilization, and foundation engineering",
+    fullDescription: "Innovative soil characterization, stabilization, and foundation engineering. Specialized in insitu soil strength assessment using Instrumented Free-Fall Penetrometers (IFFPs) for offshore infrastructure, soil-pipe interaction for subsea pipelines, ground improvement techniques, automatic SPT systems, and clay soil characterization for embankment stability. Explore sustainable solutions for municipal solid waste and seismic isolation systems. Through field studies, laboratory testing, and numerical modeling, develop practical geotechnical solutions for infrastructure development. ",
+    showFullDescription: false,
     areas: [
       {
         id: 1,
@@ -66,7 +68,9 @@ export const researchFields: ResearchField[] = [
     id: 2,
     name: "Structural Engineering",
     shortName: "SE",
-    description: "Analysis and design of structural systems, earthquake engineering",
+    description: "Innovation in this field focuses on advanced structural systems and seismic design methodologies. Our research encompasses performance-based design approaches, resilient infrastructure development, and computational modeling techniques for complex structural behaviors under various loading conditions.",
+    fullDescription: "Innovation in this field focuses on advanced structural systems and seismic design methodologies. Our research encompasses performance-based design approaches, resilient infrastructure development, and computational modeling techniques for complex structural behaviors under various loading conditions. We investigate novel construction materials, smart structural health monitoring systems, and sustainable design practices to create safer, more efficient built environments. Through experimental testing and numerical simulations, we develop practical solutions for challenging structural engineering problems across different scales and applications.",
+    showFullDescription: false,
     areas: [
       {
         id: 3,

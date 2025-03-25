@@ -1,4 +1,8 @@
-
+export interface Area {
+  id: number;
+  name: string;
+  papers: Array<ResearchPaper>;
+}
 export interface ResearchPaper {
   id: number;
   title: string;
@@ -21,5 +25,7 @@ export interface ResearchField {
   name: string;
   shortName: string;
   description: string;
-  areas: ResearchArea[];
+  fullDescription: string;
+  showFullDescription: boolean;
+  areas: Area[];
 }
