@@ -66,10 +66,10 @@ export const researchFields: ResearchField[] = [
   },
   {
     id: 2,
-    name: "Structural Engineering",
-    shortName: "SE",
-    description: "Innovation in this field focuses on advanced structural systems and seismic design methodologies. Our research encompasses performance-based design approaches, resilient infrastructure development, and computational modeling techniques for complex structural behaviors under various loading conditions.",
-    fullDescription: "Innovation in this field focuses on advanced structural systems and seismic design methodologies. Our research encompasses performance-based design approaches, resilient infrastructure development, and computational modeling techniques for complex structural behaviors under various loading conditions. We investigate novel construction materials, smart structural health monitoring systems, and sustainable design practices to create safer, more efficient built environments. Through experimental testing and numerical simulations, we develop practical solutions for challenging structural engineering problems across different scales and applications.",
+    name: "Geoenvironmental Resources & Monitoring",
+    shortName: "GERM",
+    description: "The research spans multiple fields, including climate studies, mineral exploration, and environmental studies. It covers Antarctic paleoclimatology, sedimentology, remote sensing, and data validation techniques to enhance satellite-derived rainfall accuracy...",
+    fullDescription: "The research spans multiple fields, including climate studies, mineral exploration, and environmental studies. It covers Antarctic paleoclimatology, sedimentology, remote sensing, and data validation techniques to enhance satellite-derived rainfall accuracy, particularly in complex terrains. Hydrometeorology, climatology, and statistical evaluations of satellite-based precipitation datasets are explored for improved rainfall estimates. Geospatial analysis also addresses accessibility issues in healthcare. Mineral exploration focuses on geoheritage, petrology, and economic mineralization. Environmental studies investigate microplastic pollution in ecosystems, analytical techniques in environmental monitoring, submarine groundwater discharge, and biogeochemistry in fishing zones. Additionally, geotechnical, GIS, and geostatistical methods are applied to civil and environmental engineering challenges. Other areas of focus include environmental management, waste treatment, methane emission monitoring, and improving energy equity through measurements of household energy usage and sustainable construction materials.",
     showFullDescription: false,
     areas: [
       {
